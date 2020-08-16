@@ -13,10 +13,11 @@
 		<div id="Job-Details">
 			<h2>PHP Developer</h2><hr>
 
-		<p><b>Skills Required -</b> HTML, CSS, Javascript, PHP, Laravel, MySQL, Angular, Cake PHP, PHP MVC Framework, Node JS</p>
-		<p><b>Experience -</b> 3+ Years</p>
-		<p><b>Location -</b> Mumbai</p>
+		<p><b>Skills Required -</b> <span id="skills-inner">HTML, CSS, Javascript, PHP, Laravel, MySQL, Angular, Cake PHP, PHP MVC Framework, Node JS</span></p>
+		<p><b>Experience -</b> <span id="experience">3+ Years</span></p>
+		<p><b>Location -</b> <span id="location">Mumbai</span></p>
 		<p><b>Job Description -</b> <br>
+			<span id="job-description">
 			- Strong knowledge of PHP/MYSQL with OOPS concept.<br>
 			- Strong knowledge in making custom modules.<br>
 			- Ajax, Jquery, HTML, CSS.<br>
@@ -28,12 +29,45 @@
 			- Develop all PHP based web services to be used by other parts of the system.<br>
 			- Should be able to write optimized, functional and standards-compliant code.<br>
 			- Must have experience to design database structure.<br>
+			</span>
 			</p>
 
-		<p><b>Salary -</b> 4.00 - 7.00 LPA</p><br>
+		<p><b>Salary -</b> <span id="salary">4.00 - 7.00 LPA</span></p><br>
 
 		<button type="button" class="btn"><a href="#apply-now">Apply Now</a></button>
-		<button type="button" class="btn">Update Job</button>
+		<button type="button" class="btn" data-toggle="modal" data-target="#update-job">Update Job Details</button>
+
+		<div class="modal fade" id="update-job">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4>Update Job Details</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+									<form action="php-developer.html" class="form" onsubmit="return updatejob()">
+										<div class="modal-body">
+											<div class="form-group">
+												<label>Skills Required :</label>
+												<input id="skills-form" type="text" class="form-control mb-2" required>
+												<label>Experience :</label>
+												<input id="experience-form" type="text" class="form-control mb-2" required>
+												<label>Location :</label>
+												<input id="location-form" type="text" class="form-control mb-2" required>
+												<label>Salary :</label>
+												<input id="salary-form" type="text" class="form-control mb-2" required>
+												<label>Job Description :</label>
+												<textarea id="description-form" type="text" rows="3" class="form-control" required></textarea>
+											</div>
+										</div>
+										<div class="modal-footer justify-content-center">
+											<button type="submit" class="btn" data-target="php-developer.html">Submit</button>
+											<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
 		</div>
 		<br><br>
 
@@ -79,6 +113,28 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+			
+		function updatejob(){
+			var skills = document.getElementById('skills-form').value;
+			var experience = document.getElementById('experience-form').value;
+			var location = document.getElementById('location-form').value;
+			var salary = document.getElementById('salary-form').value;
+			var description = document.getElementById('description-form').value;
+
+			document.getElementById('skills-inner').innerHTML = skills;
+			document.getElementById('experience').innerHTML = experience;
+			document.getElementById('location').innerHTML = location;
+			document.getElementById('salary').innerHTML = salary;
+			document.getElementById('job-description').innerHTML = description;
+
+			alert("Job Details Updated Successfully!");
+
+			return false;
+		}
+
+	</script>
 
 	
 </body>

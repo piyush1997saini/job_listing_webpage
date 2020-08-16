@@ -58,3 +58,9 @@ form button{
 	text-decoration: none!important;
 	color: #000000!important; 
 }
+.default{
+	display: none;
+}
+.changedClass{
+	display: inline;
+}

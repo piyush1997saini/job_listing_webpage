@@ -11,7 +11,7 @@
 <body>
 	<div class="container py-5">
 		<div class="row justify-content-center">
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center">
 					<div class="card-header">
 						<div class="card-title"><h3>Web Designer</h3></div>
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center">
 					<div class="card-header">
 						<div class="card-title"><h3>Frontend Developer</h3></div>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center">
 					<div class="card-header">
 						<div class="card-title"><h3>Full Stack Developer</h3></div>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center">
 					<div class="card-header">
 						<div class="card-title"><h3>PHP Developer</h3></div>
@@ -75,7 +75,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center">
 					<div class="card-header">
 						<div class="card-title"><h3>MEAN Stack Developer</h3></div>
@@ -91,7 +91,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4">
+			<div class="col-10 col-lg-4 col-md-6 default" id="add-job">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3 id="job-name"></h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> <span id="keyskills"></span></p>
+							<p><b>Job Brief-</b> <span id="job-brief"></span></p>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="mean-stack-developer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-lg-4 col-md-6">
 				<div class="card text-center post-job p-5">
 					<div class="card-title">
 						<a class="post-job" data-toggle="modal" data-target="#post-a-job">
@@ -107,20 +123,20 @@
 										<h4>Post a New Job</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									</div>
-									<form class="form" onsubmit="return confirmation()">
+									<form action="page-two.html" class="form" onsubmit="return addjob()">
 										<div class="modal-body">
 											<div class="form-group">
 												<label>Job Name :</label>
-												<input type="text" name="Job Name" class="form-control mb-2">
+												<input id="name" type="text" name="Job Name" class="form-control mb-2" required>
 												<label>Keyskills :</label>
-												<input type="text" name="Keyskills" class="form-control mb-2">
+												<input id="skills" type="text" name="Keyskills" class="form-control mb-2" required>
 												<label>Job Brief :</label>
-												<textarea type="text" name="Job Brief" rows="3" class="form-control"></textarea>
+												<textarea id="brief" type="text" name="Job Brief" rows="3" class="form-control" required></textarea>
 											</div>
 										</div>
 										<div class="modal-footer justify-content-center">
-											<button type="button" class="btn btn-primary">Submit</button>
-											<button type="button" class="btn btn-primary">Cancel</button>
+											<button type="submit" class="btn" data-target="page-two.html">Submit</button>
+											<button type="button" class="btn" data-dismiss="modal">Cancel</button>
 										</div>
 									</form>
 								</div>
@@ -144,8 +160,25 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
-		function confirmation(){
-			alert("Your Job is added successfully!");
+			
+		function addjob(){
+			var name = document.getElementById('name').value;
+			var skills = document.getElementById('skills').value;
+			var brief = document.getElementById('brief').value;
+
+			document.getElementById('job-name').innerHTML = name;
+			document.getElementById('keyskills').innerHTML = skills;
+			document.getElementById('job-brief').innerHTML = brief;
+
+			document.getElementById('add-job').className = "col-10 col-lg-4 col-md-6 changedClass";
+
+			if (name!="" || skills!="" || brief!="") {
+				alert("New Job is Added Successfully!");
+			}
+			
+
+			return false;
+
 		}
 	</script>
 	
