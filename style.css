@@ -1,0 +1,60 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+body{
+	background: rgb(197,194,247);
+    background: linear-gradient(241deg, rgba(197,194,247,1) 0%, rgba(218,218,238,1) 50%, rgba(176,235,247,1) 100%);
+}
+a{
+	text-decoration: none!important;
+	color: #17202A!important;
+	cursor: pointer;
+}
+a:hover{
+	color: #1565C0!important;
+}
+.card{
+	margin-bottom: 40px;
+	box-shadow: 0 8px 15px 0;
+	transition: 0.3s;
+	border: 1px solid #AED6F1!important;
+}
+.card:hover{
+	transform: translate3d(-10px, -10px, -10px);
+}
+.card-header, .card-footer{
+	background-color: #AED6F1!important;
+}
+.card-body{
+	background-color: #D4E6F1!important;
+}
+.post-job{
+	background-color: #AED6F1!important;
+}
+.pagination .page-item .page-link{
+	background-color: #90c5e9!important; 
+}
+.pagination .active .page-link{
+	background-color: #4aa9e9!important; 
+}
+.modal .modal-content{
+	background-color: #AED6F1!important;
+}
+.modal form input, .modal form textarea{
+	background-color: #D4E6F1!important;
+}
+form button{
+	background-color: #4aa9e9!important;
+	color: #000000!important;
+}
+#Job-Details button{
+	background-color: #4aa9e9!important;
+	color: #000000!important;
+}
+#Job-Details button a{
+	text-decoration: none!important;
+	color: #000000!important; 
+}

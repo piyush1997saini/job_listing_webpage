@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Job Listing Website Page Three</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-10 col-md-4">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3>Web Designer</h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> Adobe Photoshop, Adobe Illustrator, HTML5, CSS3, JavaScript</p>
+							<p><b>Job Brief-</b> Good working knowledge of XHTML and CSS at code level. Should have worked on tools like Adobe photo shop, Illustrator, Dream view.</p>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="web-designer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-md-4">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3>Frontend Developer</h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> HTML5, CSS3, Bootstrap, JavaScript, Jquery, ReactJS</p>
+							<p><b>Job Brief-</b> Should have worked on HTML/CSS, Javascript, Jquery, Bootstrap. A good working knowledge of ReactJS library and Database is prefferable.</p>
+						</div> 
+					</div>
+					<div class="card-footer">
+						<a href="frontend-developer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-md-4">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3>Full Stack Developer</h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> HTML, CSS, Nodejs, Express, Vuejs, Bootstrap, MySQL.</p>
+							<p><b>Job Brief-</b> Should be comfortable around both front-end and back-end coding languages, development frameworks and third-party libraries.</p>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="full-stack-developer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-md-4">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3>PHP Developer</h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> HTML, CSS, Javascript, PHP, Laravel, MySQL</p>
+							<p><b>Job Brief-</b> Proven software development experience in PHP & MySQL. Strong skills in Laravel, CodeIgniter or CakePHP framework. </p>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="php-developer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-md-4">
+				<div class="card text-center">
+					<div class="card-header">
+						<div class="card-title"><h3>MEAN Stack Developer</h3></div>
+					</div>
+					<div class="card-body">
+						<div class="card-text text-justify">
+							<p><b>Keyskills-</b> Vue.JS, React.JS, Node JS, Mongo DB, and Angular JS</p>
+							<p><b>Job Brief-</b> Building interactive consumer data from multiple systems and RESTfully abstract to the UI through a Node.js backend. </p>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="mean-stack-developer.html">More Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-10 col-md-4">
+				<div class="card text-center post-job p-5">
+					<div class="card-title">
+						<a class="post-job" data-toggle="modal" data-target="#post-a-job">
+							<h3>+</h3> 
+							<h4>Add a new job</h4>
+						</a>
+					</div>
+				</div>
+						<div class="modal fade" id="post-a-job">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4>Post a New Job</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+									<form class="form" onsubmit="return confirmation()">
+										<div class="modal-body">
+											<div class="form-group">
+												<label>Job Name :</label>
+												<input type="text" name="Job Name" class="form-control mb-2">
+												<label>Keyskills :</label>
+												<input type="text" name="Keyskills" class="form-control mb-2">
+												<label>Job Brief :</label>
+												<textarea type="text" name="Job Brief" rows="3" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="modal-footer justify-content-center">
+											<button type="submit" class="btn btn-primary">Submit</button>
+											<button type="button" class="btn btn-primary">Cancel</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+			</div>
+		</div>
+
+		<ul class="pagination justify-content-center mt-5">
+            <li class="page-item"><a href="page-two.html" class="page-link">Previous</a></li>
+            <li class="page-item"><a href="index.html" class="page-link">1</a></li>
+            <li class="page-item"><a href="page-two.html" class="page-link">2</a></li>
+            <li class="page-item active"><a href="#" class="page-link">3</a></li>
+            <li class="page-item disabled"><a href="#" class="page-link">Next</a></li>
+        </ul>
+	</div>
+
+	<script src="script.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		function confirmation(){
+			alert("Your Job is added successfully!");
+		}
+	</script>
+	
+</body>
+</html>
